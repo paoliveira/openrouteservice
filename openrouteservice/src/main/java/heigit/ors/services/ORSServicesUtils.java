@@ -117,8 +117,9 @@ public class ORSServicesUtils {
 					if (jProfileLimits.length() > 0)
 						jProfileProps.put("limits", jProfileLimits);
 
-					jProfiles.put("profile " + Integer.toString(i), jProfileProps);
+					jProfileProps.put("boundingbox", rp.getBounds().toString());
 
+					jProfiles.put("profile " + Integer.toString(i), jProfileProps);
 					i++;
 				}
 

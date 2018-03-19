@@ -228,6 +228,7 @@ public class RoutingProfileManager {
                         try {
                             RoutingProfile rp = future.get();
                             nCompletedTasks++;
+                            LOGGER.info("Bounding Box: " +rp.getBounds().toLessPrecisionString() + ".");
                             if (!_routeProfiles.add(rp))
                                 LOGGER.warn("Routing profile has already been added.");
                         } catch (InterruptedException e) {

@@ -4,7 +4,7 @@ services:
         build:
             context: ../
             args:
-                APP_CONFIG: ./docker/conf/app.config.sample
+                APP_CONFIG: ./docker/conf/app.config.lisboa
         volumes:
             - ./build/:/ors-core/build/
     ors-core:
